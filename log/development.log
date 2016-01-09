@@ -1599,3 +1599,61 @@ ActionController::RoutingError (uninitialized constant CreatureController):
   Rendered /Users/noahwimmer/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/noahwimmer/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/noahwimmer/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.0ms)
+
+
+Started GET "/creatures/1" for ::1 at 2016-01-09 14:35:43 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered creatures/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/creatures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/application.self-67658d95542c0c70aa749ed9a2507906d6559379a83a1d61c895240d36776951.css?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/bootstrap-3.3.6.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/creatures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-09 14:35:43 -0800
+
+
+Started GET "/creatures/5/edit" for ::1 at 2016-01-09 14:35:51 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered creatures/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/creatures/5" for ::1 at 2016-01-09 14:35:53 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mGCpoGgTm3A9zGO541gFKSbrXOtQF/Ccigh+IfRRaV3KZEqhaa/Gfxz49Bcribh22SfqoZppcCyjpEbZKndv7g==", "creature"=>{"name"=>"Dragon", "description"=>"Big AND SCARY reptile that deploys a breath weapon"}, "commit"=>"Save Creature", "id"=>"5"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures/5
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/creatures/5" for ::1 at 2016-01-09 14:35:53 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures" WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered creatures/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms)
