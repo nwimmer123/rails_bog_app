@@ -1,8 +1,17 @@
+<!-- NAV BAR -->
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="/creatures">Home</a></li>
+  <li role="presentation"><a href="/creatures/new">New Creature</a></li>
+</ul>
+
 <!--- loop do display creatures -->
 
 <% @creatures.each do |creature| %>
 	<p>
 		<strong>Name:</strong> <%= creature.name %><br>
 		<strong>Description:</strong> <%= creature.description %>
+		<br>
+		<a href="/creatures/<%= creature.id %>">Show page</a>
 	</p>
 <% end %>

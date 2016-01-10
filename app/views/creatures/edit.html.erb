@@ -1,3 +1,10 @@
+<!-- NAV BAR -->
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="/creatures">Home</a></li>
+  <li role="presentation"><a href="/creatures/new">New Creature</a></li>
+</ul>
+
 <%= form_for @creature do |f| %>
 	<%= f.text_field :name %>
 	<%= f.text_area :description %>
